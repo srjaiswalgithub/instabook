@@ -2,6 +2,7 @@ import { Heart, Home, LogOut, MessageCircle, PlusSquare, Search, TrendingUp } fr
 import React, { useState } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 import { toast } from 'sonner'
+
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
