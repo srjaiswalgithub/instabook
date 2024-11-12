@@ -2,6 +2,7 @@ import { Heart, Home, LogOut, MessageCircle, PlusSquare, Search, TrendingUp } fr
 import React, { useState } from 'react'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 import { toast } from 'sonner'
+import { Button } from './ui/button'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
@@ -26,7 +27,7 @@ const LeftSidebar = () => {
 
     const logoutHandler = async () => {
         try {
-            const res = await axios.get('http://localhost:5500/api/v1/user/logout', { withCredentials: true });
+            const res = await axios.get('https://instabook-2.onrender.com/api/v1/user/logout', { withCredentials: true });
             if (res.data.success) {
                 dispatch(setAuthUser(null));
                 dispatch(setSelectedPost(null));

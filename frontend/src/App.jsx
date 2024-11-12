@@ -63,7 +63,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     if (user) {
-      const socketio = io('http://localhost:5500', {
+      const socketio = io('https://instabook-2.onrender.com', {
         query: {
           userId: user?._id
         },
